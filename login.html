@@ -1,101 +1,88 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content="" />
-        <title>eMercado - Todo lo que busques está aquí</title>
+<html lang="es">
 
-        <link
-            rel="canonical"
-            href="https://getbootstrap.com/docs/4.3/examples/album/"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"
-            rel="stylesheet"
-        />
-        <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-            html,
-            body {
-                height: 100%;
-            }
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <title>eMercado - Todo lo que busques está aquí</title>
 
-            body {
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-align: center;
-                align-items: center;
-                padding-top: 40px;
-                padding-bottom: 40px;
-                background-color: #f5f5f5;
-            }
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
 
-            .signin {
-                width: 100%;
-                max-width: 330px;
-                padding: 15px;
-                margin: auto;
-            }
+        body {
+            background-color: #f5f5f5;
+        }
 
-            .btn-brand {
-                background-color: #d61c6c !important;
-                border-color: #d61c6c !important;
-            }
-        </style>
-    </head>
+        .signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
 
-    <body class="text-center">
-        <div class="container signin">
-            <form class="form-signin">
-                <img
-                    class="mb-4"
-                    src="./img/login-2.png"
-                    alt=""
-                    width="300"
-                    height="100%"
-                />
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                <label for="inputEmail" class="sr-only">Email address</label>
-                <input
-                    type="email"
-                    id="inputEmail"
-                    class="form-control"
-                    placeholder="Email address"
-                    required=""
-                    autofocus=""
-                />
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input
-                    type="password"
-                    id="inputPassword"
-                    class="form-control"
-                    placeholder="Password"
-                    required=""
-                />
-                <div class="checkbox mb-3">
+        .btn-brand {
+            background-color: #d61c6c !important;
+            border-color: #d61c6c !important;
+        }
+
+        .font-brand {
+            color: #d61c6c;
+        }
+
+        .font-brand-light {
+            color: #f5f5f5;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="vh-100 d-flex text-center align-items-center">
+
+        <div class="signin col-6">
+            <form class="form-signin" action="index.html">
+                <h1 class=" mb-3 font-weight-bold font-brand">Registrarse</h1>
+                <label for="inputEmail" class="sr-only">Ingresa tu email</label>
+                <input type="email" id="inputEmail" class="form-control rounded-pill mb-2" placeholder="Ingresa tu email" required autofocus="" />
+                <label for="inputPassword" class="sr-only">Ingresa tu contraseña</label>
+                <input type="password" id="inputPassword" class="form-control rounded-pill" placeholder="Ingresa tu contraseña" required />
+                <div class="checkbox my-3">
                     <label>
-                        <input type="checkbox" value="remember-me" /> Remember
-                        me
+                        <input type="checkbox" value="remember-me" /> Recordarme
                     </label>
                 </div>
-                <button
-                    class="btn btn-lg btn-primary btn-block btn-brand"
-                    type="submit"
-                >
-                    Sign in
+                <button class="btn btn-lg btn-primary btn-block btn-brand rounded-pill" type="submit">
+                    Crear cuenta
                 </button>
+                <a href="#" class="d-inline-block text-decoration-none text-muted mt-3">¿Ya tienes cuenta? Ingresá aquí</a>
                 <p class="mt-5 mb-3 text-muted">© 2017-2020</p>
             </form>
         </div>
 
-        <script src="js/init.js"></script>
-        <script src="js/login.js"></script>
-    </body>
+        <div class="col-6 h-100 background font-brand-light d-flex align-items-center justify-content-center">
+            <div class="">
+                <h1 class="display-3 ">e-<span class=" font-weight-bold">MERCADO</span></h1>
+                <h4>tu e-commerce favorito</h4>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/init.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
 </html>
