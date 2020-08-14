@@ -44,11 +44,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
             window.location = "home.html";
         }
     });
-
-    function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("Full Name: " + profile.getName());
-        location.href = "home.html";
-    }
 });
