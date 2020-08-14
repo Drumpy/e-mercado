@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 JSON.stringify({ email: inputEmailDOM.value })
             );
             console.log({ localStorage });
-            window.location = "index.html";
+            window.location = "home.html";
         }
     });
 });
