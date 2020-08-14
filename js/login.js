@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             alertDOM.classList.remove("alertNone");
             alertDOM.classList.add("animate__animated");
             alertDOM.classList.add("animate__fadeInUp");
-            alertDOM.classList.add("animate__fast");
+            alertDOM.classList.add("animate__fadeInUp");
             alertDOM.innerText = "Favor de ingresar una contraseña ⛔";
         } else {
             inputPasswordDOM.classList.remove("invalid");

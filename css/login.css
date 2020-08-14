@@ -1,0 +1,57 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.btn-brand {
+    background-color: #d61c6c !important;
+    border-color: #d61c6c !important;
+}
+
+.btn-brand:hover {
+    background-color: hsl(334, 77%, 39%) !important;
+}
+
+.font-brand {
+    color: #d61c6c;
+}
+
+.font-brand-light {
+    color: #f5f5f5;
+    user-select: none;
+}
+
+.invalid {
+    color: #d61c6c;
+    border: 2px solid #d61c6c !important;
+}
+
+.form-control:focus,
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(214, 28, 108, 0.25);
+    border-color: hsl(334, 77%, 75%) !important;
+}
+
+.alert {
+    color: #f5f5f5;
+    background-color: #d61c6c;
+    border-color: #d61c6c;
+    z-index: 999;
+    border-radius: 50px;
+    box-shadow: 0px 15px 20px -20px rgba(214, 28, 108, 0.35);
+    top: 85vh;
+    left: 25%;
+}
+
+.alert.alertNone {
+    display: none;
+}
