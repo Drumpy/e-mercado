@@ -14,6 +14,9 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/login.css">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="249059822369-goocq45dgk8lg1o1fqt06p7f11ek56pb.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -38,6 +41,7 @@
         <button id="buttonDOM" class="btn btn-lg btn-primary btn-block btn-brand rounded-pill">
           Crear cuenta
         </button>
+        <div class="g-signin2 btn-block" data-onsuccess="onSignIn" data-theme="dark"></div>
         <a href="#" class="d-inline-block text-decoration-none text-muted mt-3">¿Ya tienes cuenta? Ingresá aquí</a>
         <p class="mt-5 mb-3 text-muted">© 2017-2020</p>
       </div>
