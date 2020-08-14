@@ -55,3 +55,7 @@ body {
 .alert.alertNone {
     display: none;
 }
+
+.gSigninContainer {
+    padding-left: 30%;
+}
