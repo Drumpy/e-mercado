@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
             inputEmailDOM.classList.add("invalid");
             validación = false;
             alertDOM.classList.remove("alertNone");
+            alertDOM.classList.add("animate__animated");
+            alertDOM.classList.add("animate__fadeInUp");
+            alertDOM.classList.add("animate__fast");
             alertDOM.innerText = "Favor de ingresar un email ⛔";
+            z;
         } else {
             inputEmailDOM.classList.remove("invalid");
         }
@@ -23,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
             inputPasswordDOM.classList.add("invalid");
             validación = false;
             alertDOM.classList.remove("alertNone");
+            alertDOM.classList.add("animate__animated");
+            alertDOM.classList.add("animate__fadeInUp");
+            alertDOM.classList.add("animate__fast");
             alertDOM.innerText = "Favor de ingresar una contraseña ⛔";
         } else {
             inputPasswordDOM.classList.remove("invalid");
