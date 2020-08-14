@@ -49,6 +49,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log("Full Name: " + profile.getName());
-        location = "home.html";
+        location.href = "home.html";
     }
 });
