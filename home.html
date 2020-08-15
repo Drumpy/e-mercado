@@ -134,11 +134,10 @@
 		let bienvenidaDOM = document.getElementById("bienvenidaDOM");
 		let userName = JSON.parse(localStorage.User);
 		let avatar = document.getElementById("avatar");
-		let avatarURI = localStorage.User.avatar;
-		console.log(avatarURI);
+		console.log(userName.avatar);
 
 		bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
-		avatar.style.backgroundImage = `url('${avatarURI}')`;
+		avatar.style.backgroundImage = `url('${userName.avatar}')`;
 
 		function signOut() {
 			var auth2 = gapi.auth2.getAuthInstance();
