@@ -133,7 +133,7 @@
         let bienvenidaDOM = document.getElementById("bienvenidaDOM");
         let userName = JSON.parse(localStorage.User);
 
-        bienvenidaDOM.innerHTML = `Bienvenido ${userName.email}`;
+        bienvenidaDOM.innerHTML = `Bienvenid@ ${userName.email}`;
 
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
