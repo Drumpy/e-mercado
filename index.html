@@ -72,7 +72,10 @@
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
       localStorage.setItem(
-        "User", JSON.stringify({ email: profile.getName() }));
+        "User", JSON.stringify({
+          email: profile.getName(),
+          avatar: profile.getImageUrl()
+        }));
       window.location = "home.html";
     }
   </script>
