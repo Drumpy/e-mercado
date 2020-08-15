@@ -7,16 +7,17 @@ document.addEventListener("DOMContentLoaded", function (e) {
         let inputPasswordDOM = document.getElementById("inputPasswordDOM");
         let buttonDOM = document.getElementById("buttonDOM");
         let alertDOM = document.getElementById("alertDOM");
-
         let validación = true;
 
         if (inputEmailDOM.value.trim() === "") {
             inputEmailDOM.classList.add("invalid");
             validación = false;
             alertDOM.classList.remove("alertNone");
-            alertDOM.classList.add("animate__animated");
-            alertDOM.classList.add("animate__fadeInUp");
-            alertDOM.classList.add("animate__fast");
+            alertDOM.classList.add(
+                "animate__animated",
+                "animate__fadeInUp",
+                "animate__fast"
+            );
             alertDOM.innerText = "Favor de ingresar un email ⛔";
         } else {
             inputEmailDOM.classList.remove("invalid");
@@ -26,9 +27,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
             inputPasswordDOM.classList.add("invalid");
             validación = false;
             alertDOM.classList.remove("alertNone");
-            alertDOM.classList.add("animate__animated");
-            alertDOM.classList.add("animate__fadeInUp");
-            alertDOM.classList.add("animate__fadeInUp");
+            alertDOM.classList.add(
+                "animate__animated",
+                "animate__fadeInUp",
+                "animate__fast"
+            );
             alertDOM.innerText = "Favor de ingresar una contraseña ⛔";
         } else {
             inputPasswordDOM.classList.remove("invalid");
@@ -42,5 +45,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
             console.log({ localStorage });
             window.location = "home.html";
         }
+
+        setTimeout(function () {
+            alertDOM.classList.add("alertNone");
+        }, 2000);
     });
 });
