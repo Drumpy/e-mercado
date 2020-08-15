@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="es">
 
 <head>
@@ -45,7 +44,6 @@
         <div class="gSigninContainer mt-3">
           <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
         </div>
-        <!-- <a href="#" class="d-inline-block text-decoration-none text-muted mt-3">¿Ya tienes cuenta? Ingresá aquí</a> -->
         <p class="mt-5 mb-3 text-muted">© 2017-2020</p>
       </div>
 
@@ -64,7 +62,6 @@
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
-      console.log("Full Name: " + profile.getName());
       localStorage.setItem(
         "User", JSON.stringify({ email: profile.getName() }));
       window.location = "home.html";
