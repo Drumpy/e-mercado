@@ -24,7 +24,7 @@
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
             <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <a class="py-2 d-md-inline-block font-brand" onclick="signOut();" href="#">Salir</a>
+            <strong><a class="py-2 d-md-inline-block font-brand" onclick="signOut();" href="#">Salir</a></strong>
         </div>
     </nav>
     <main role="main">
@@ -132,7 +132,7 @@
         let bienvenidaDOM = document.getElementById("bienvenidaDOM");
         let userName = JSON.parse(localStorage.User);
 
-        bienvenidaDOM.innerHTML = `Bienvenid@ ${userName.email}`;
+        bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
 
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
