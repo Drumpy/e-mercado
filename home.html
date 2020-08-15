@@ -25,8 +25,7 @@
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
             <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <!-- <a id="salirGoogle" class="py-2 d-md-inline-block font-brand" onclick="signOut();" href="#">Salir</a> -->
-            <a href="#" onclick="signOut();">Sign out</a>
+            <a class="py-2 d-md-inline-block font-brand" onclick="signOut();" href="#">Salir</a>
         </div>
     </nav>
     <main role="main">
@@ -135,8 +134,6 @@
         let userName = JSON.parse(localStorage.User);
 
         bienvenidaDOM.innerHTML = `Bienvenido ${userName.email}`;
-
-        // let salirGoogle = document.getElementById("salirGoogle");
 
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
