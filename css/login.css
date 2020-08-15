@@ -12,24 +12,6 @@ body {
     margin: auto;
 }
 
-.btn-brand {
-    background-color: #d61c6c !important;
-    border-color: #d61c6c !important;
-}
-
-.btn-brand:hover {
-    background-color: hsl(334, 77%, 39%) !important;
-}
-
-.font-brand {
-    color: #d61c6c;
-}
-
-.font-brand-light {
-    color: #f5f5f5;
-    user-select: none;
-}
-
 .invalid {
     color: #d61c6c;
     border: 2px solid #d61c6c !important;

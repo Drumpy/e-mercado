@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
             alertDOM.classList.add("animate__fadeInUp");
             alertDOM.classList.add("animate__fast");
             alertDOM.innerText = "Favor de ingresar un email ⛔";
-            z;
         } else {
             inputEmailDOM.classList.remove("invalid");
         }
