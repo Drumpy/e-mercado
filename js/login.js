@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 JSON.stringify({ email: inputEmailDOM.value })
             );
             console.log({ localStorage });
-            // window.location = "home.html";
+            window.location = "home.html";
         }
     });
 });
