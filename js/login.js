@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             window.location = "home.html";
         }
 
-        setTimeout(function () {
+        setTimeout(() => {
             alertDOM.classList.add("alertNone");
         }, 2000);
     });

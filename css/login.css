@@ -38,8 +38,8 @@ body {
     left: 25%;
 }
 
-.alert.alertNone {
-    display: none;
+.alert.alert-danger.alertNone {
+    display: none !important;
 }
 
 /* Google Button */
