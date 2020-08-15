@@ -157,7 +157,6 @@ a.custom-card:hover {
 }
 
 /* Estilos personlizados */
-
 .btn-brand {
     background-color: #d61c6c !important;
     border-color: #d61c6c !important;
@@ -174,4 +173,12 @@ a.custom-card:hover {
 .font-brand-light {
     color: #f5f5f5;
     user-select: none;
+}
+
+#avatar {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
