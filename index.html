@@ -25,7 +25,7 @@
     <div class="signin col-6">
       <div class="form-signin">
         <h1 class=" mb-4 font-weight-bold font-brand">Bienvenid@</h1>
-        <div id="alertDOM" class="alert alert-danger alertNone" role="alert">
+        <div id="alertDOM" class="alert alert-danger alertNone font-weight-bold" role="alert">
 
         </div>
         <label for="inputEmail" class="sr-only">Ingresa tu email</label>
@@ -73,6 +73,12 @@
         }));
       window.location = "home.html";
     }
+
+    window.onload = function () {
+      let background = document.querySelector(".background");
+      let rdm = Math.floor(Math.random() * 3);
+      background.style.backgroundImage = "url('../img/background-" + rdm + ".png')"
+    };
   </script>
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>

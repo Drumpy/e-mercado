@@ -9,20 +9,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         let alertDOM = document.getElementById("alertDOM");
         let validación = true;
 
-        if (inputEmailDOM.value.trim() === "") {
-            inputEmailDOM.classList.add("invalid");
-            validación = false;
-            alertDOM.classList.remove("alertNone");
-            alertDOM.classList.add(
-                "animate__animated",
-                "animate__fadeInUp",
-                "animate__fast"
-            );
-            alertDOM.innerText = "Favor de ingresar un email ⛔";
-        } else {
-            inputEmailDOM.classList.remove("invalid");
-        }
-
         if (inputPasswordDOM.value.trim() === "") {
             inputPasswordDOM.classList.add("invalid");
             validación = false;
@@ -32,9 +18,23 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 "animate__fadeInUp",
                 "animate__fast"
             );
-            alertDOM.innerText = "Favor de ingresar una contraseña ⛔";
+            alertDOM.innerText = "⛔ Favor de ingresar una contraseña ⛔";
         } else {
             inputPasswordDOM.classList.remove("invalid");
+        }
+
+        if (inputEmailDOM.value.trim() === "") {
+            inputEmailDOM.classList.add("invalid");
+            validación = false;
+            alertDOM.classList.remove("alertNone");
+            alertDOM.classList.add(
+                "animate__animated",
+                "animate__fadeInUp",
+                "animate__fast"
+            );
+            alertDOM.innerText = "⛔ Favor de ingresar un nombre de usuario ⛔";
+        } else {
+            inputEmailDOM.classList.remove("invalid");
         }
 
         if (validación) {
@@ -48,6 +48,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         setTimeout(() => {
             alertDOM.classList.add("alertNone");
-        }, 2000);
+        }, 2500);
     });
 });

@@ -47,11 +47,11 @@ body {
     padding-left: 17% !important;
 }
 .abcRioButtonBlue {
-    background-color: #d61c6c !important;
+    background-color: hsl(334, 77%, 47%) !important;
 }
 
 .abcRioButtonBlue:hover {
-    background-color: #d61c6c !important;
+    background-color: hsl(334, 77%, 39%) !important;
 }
 
 .abcRioButtonContents {
