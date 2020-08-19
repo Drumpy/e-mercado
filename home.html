@@ -136,7 +136,6 @@
 		let bienvenidaDOM = document.getElementById("bienvenidaDOM");
 		let userName = JSON.parse(localStorage.User);
 		let avatar = document.getElementById("avatar");
-		console.log(userName.avatar);
 
 		bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
 		avatar.style.backgroundImage = `url('${userName.avatar}')`;
@@ -144,8 +143,9 @@
 		function signOut() {
 			var auth2 = gapi.auth2.getAuthInstance();
 			auth2.signOut().then(function () {
-				window.location = "index.html";
+				location.href = "index.html";
 			});
+			localStorage.clear();
 			window.location = "index.html";
 		};
 
@@ -159,6 +159,7 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/init.js"></script>
+	<script src="js/checkUser.js"></script>
 </body>
 
 </html>
