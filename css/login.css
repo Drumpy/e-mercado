@@ -5,6 +5,15 @@ body {
     background-color: #f5f5f5;
 }
 
+.background {
+    background-color: #d61c6c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 .signin {
     width: 100%;
     max-width: 330px;

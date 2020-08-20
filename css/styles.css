@@ -152,14 +152,6 @@ a.custom-card:hover {
     color: orange;
 }
 
-.background {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: content-box;
-    padding-right: 0px;
-    padding-left: 0px;
-}
-
 /* Estilos personlizados */
 .btn-brand {
     background-color: #d61c6c !important;
