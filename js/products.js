@@ -5,34 +5,29 @@ function showCategoriesList(array) {
     for (let i = 0; i < array.length; i++) {
         let category = array[i];
 
-        htmlContentToAppend +=
-            `
+        htmlContentToAppend += `
         <div class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
-                    <img src="` +
-            category.imgSrc +
-            `" alt="` +
-            category.description +
-            `" class="img-thumbnail">
+                    <img src="
+            ${category.imgSrc}
+            " alt="
+            ${category.description}
+            " class="img-thumbnail">
                 </div>
                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
                         <div class="mb-1">
-                        <h4>` +
-            category.name +
-            `</h4>
-                        <p> ` +
-            category.description +
-            ` </p>
-                        <p> ` +
-            "$" +
-            category.cost +
-            `</p>
+                        <h4>
+            ${category.name} - ${category.currency} ${category.cost}
+            </h4>
+                        <p>
+            ${category.description}
+            </p>
                         </div>
-                        <small class="text-muted">` +
-            category.soldCount +
-            ` artículos</small>
+                        <small class="text-muted">
+            ${category.soldCount}
+            artículos</small>
                     </div>
                 </div>
             </div>
