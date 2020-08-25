@@ -1,0 +1,21 @@
+let bienvenidaDOM = document.getElementById("bienvenidaDOM");
+let userName = JSON.parse(localStorage.User);
+let avatar = document.getElementById("avatar");
+
+bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
+avatar.style.backgroundImage = `url('${userName.avatar}')`;
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        location.href = "index.html";
+    });
+    localStorage.clear();
+    window.location = "index.html";
+}
+
+function onLoad() {
+    gapi.load("auth2", function () {
+        gapi.auth2.init();
+    });
+}
