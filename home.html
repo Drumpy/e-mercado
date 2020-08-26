@@ -136,9 +136,15 @@
 			</p>
 		</div>
 	</footer>
-
 	<script>
+		document.addEventListener("DOMContentLoaded", function (e) {
+			let bienvenidaDOM = document.getElementById("bienvenidaDOM");
+			let userName = JSON.parse(localStorage.User);
+			let avatar = document.getElementById("avatar");
 
+			bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
+			avatar.style.backgroundImage = `url('${userName.avatar}')`;
+		}
 	</script>
 	<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 	<script src="js/jquery-3.4.1.min.js"></script>
