@@ -182,3 +182,7 @@ a.custom-card:hover {
     margin-right: 10px;
     padding: 15px;
 }
+
+.btn.btn-brand.dropdown-toggle {
+    border-radius: 30px !important;
+}
