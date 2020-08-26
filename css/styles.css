@@ -186,3 +186,8 @@ a.custom-card:hover {
 .btn.btn-brand.dropdown-toggle {
     border-radius: 30px !important;
 }
+
+.btn.btn-brand.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(214, 28, 108, 0.25) !important;
+    border-color: hsl(334, 77%, 75%) !important;
+}
