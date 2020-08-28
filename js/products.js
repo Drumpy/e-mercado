@@ -96,7 +96,7 @@ function showCategoriesList() {
 
     if (htmlContentToAppend === "") {
       // document.getElementById("contenido").innerHTML = `<h2>Producto no encontrado...</h2>`
-      document.getElementById("contenido").innerHTML = `<img src="https://media.giphy.com/media/VIQfHC9jAZbt6ojTdo/giphy.gif" class="mt-4">`
+      document.getElementById("contenido").innerHTML = `<img src="../img/travolta.gif" class="mt-4">`
     } else {
       document.getElementById("contenido").innerHTML = htmlContentToAppend;
     }
