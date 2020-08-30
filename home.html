@@ -143,6 +143,10 @@
 
 		bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
 		avatar.style.backgroundImage = `url('${userName.avatar}')`;
+
+		gapi.load("auth2", function () {
+			gapi.auth2.init();
+		});
 	</script>
 	<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 	<script src="js/jquery-3.4.1.min.js"></script>
