@@ -64,7 +64,7 @@ function showCategoriesList() {
         category.description.toLowerCase().indexOf(query) != -1
       ) {
         htmlContentToAppend += `
-            <div class="list-group-item list-group-item-action">
+            <a href="product-info.html" class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
                     <img src="
@@ -89,7 +89,7 @@ function showCategoriesList() {
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
             `;
       }
     }
