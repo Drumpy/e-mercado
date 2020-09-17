@@ -199,10 +199,19 @@ a.custom-card:hover {
     border-color: hsl(334, 77%, 75%) !important;
 }
 
+/* SCORE DE PRODUCT INFO */
 .star {
     color: rgb(180, 180, 180);
 }
 
 .star-fill {
     color: rgb(219, 171, 12);
+}
+
+/* DROPDOWN MENU */
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff !important;
+    text-decoration: none;
+    background-color: #d61c6c;
 }
