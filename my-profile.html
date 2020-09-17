@@ -83,11 +83,24 @@
       <div></div>
     </div>
   </div>
+  <script>
+    let bienvenidaDOM = document.getElementById("bienvenidaDOM");
+    let userName = JSON.parse(localStorage.User);
+    let avatar = document.getElementById("avatar");
+
+    bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
+    avatar.style.backgroundImage = `url('${userName.avatar}')`;
+
+    gapi.load("auth2", function () {
+      gapi.auth2.init();
+    });
+  </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script src="js/gSignOut.js"></script>
   <script src="js/checkUser.js"></script>
 </body>
 
