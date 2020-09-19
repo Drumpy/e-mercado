@@ -215,3 +215,29 @@ a.custom-card:hover {
     text-decoration: none;
     background-color: #d61c6c;
 }
+
+/* PUNTAJE */
+input[name="scores"] {
+    display: none;
+}
+
+.clasificacion label {
+    color: grey;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    margin-bottom: 0 !important;
+}
+
+.clasificacion label:hover,
+.clasificacion label:hover~label {
+    color: orange;
+}
+
+input[name="scores"]:checked~label {
+    color: orange;
+}

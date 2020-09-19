@@ -9,12 +9,19 @@ function showImagesGallery(array) {
 	for (let i = 0; i < array.length; i++) {
 		let imageSrc = array[i];
 
+		if (i === 0) {
+			htmlContentToAppend += `
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="${imageSrc}">
+				</div>
+			`
+			continue;
+		}
+
 		htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="${imageSrc}">
+		</div>
         `
 
 		document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
@@ -55,7 +62,7 @@ function showComments(array) {
 			<div class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-3 d-flex align-items-center">
-						<img src="../img/user-avatar.png" alt="" class="img-thumbnail">
+						<img src='img/user-avatar.png' class="img-thumbnail">
 					</div>
 					<div class="col">
 						<div class="d-flex w-100 justify-content-between">
@@ -95,6 +102,7 @@ function showScore(score) {
 function addNewComment() {
 	let newComment = document.getElementById("newComment").value;
 	let addNewComment = document.getElementById("addNewComment");
+	let scoreValue = document.getElementsByName("scores");
 	let userName = JSON.parse(localStorage.User);
 	let newCommentData = {
 		"description": newComment,
@@ -102,7 +110,11 @@ function addNewComment() {
 		"dateTime": formatDate()
 	};
 
-	console.log(newCommentData);
+	for (let value of scoreValue) {
+		if (value.checked) {
+			newCommentData.score = value.value;
+		}
+	}
 
 	comments.push(newCommentData);
 	showComments(comments);
