@@ -74,7 +74,7 @@
     window.onload = function () {
       let background = document.querySelector(".background");
       let rdm = Math.floor(Math.random() * 3);
-      background.style.backgroundImage = "url('background-" + rdm + ".png')"
+      background.style.backgroundImage = `url('./img/background-${rdm}.png')`;
     };
   </script>
   <script src="js/init.js"></script>
