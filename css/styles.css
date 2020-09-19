@@ -241,3 +241,7 @@ input[name="scores"] {
 input[name="scores"]:checked~label {
     color: orange;
 }
+
+.margin-score>span:first-child {
+    margin-left: 15px;
+}

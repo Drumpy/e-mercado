@@ -44,7 +44,7 @@ function showRelatedProducts(array) {
     				<p class="card-text">${relatedProductsIndex.description}</p>
   				</div>
   				<div class="card-body">
-    				<a href="#" class="card-link">Card link</a>
+    				<a href="#" class="card-link">Ver Producto</a>
   				</div>
 			</div>
 		`;
@@ -67,7 +67,7 @@ function showComments(array) {
 					<div class="col">
 						<div class="d-flex w-100 justify-content-between">
 							<div class="mb-1">
-								<h6 class="font-weight-bold">${comment.user} ${showScore(parseInt(comment.score))}</h6>
+								<h6 class="font-weight-bold margin-score">${comment.user} ${showScore(parseInt(comment.score))}</h6>
 								<p>${comment.description}</p>
 							</div>
 							<small class="text-muted">${comment.dateTime}</small>
