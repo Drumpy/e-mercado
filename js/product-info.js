@@ -62,7 +62,7 @@ function showComments(array) {
 			<div class="list-group-item list-group-item-action">
 				<div class="row">
 					<div class="col-3 d-flex align-items-center">
-						<img src='img/user-avatar.png' class="img-thumbnail">
+						<img src='./img/user-avatar.png' class="img-thumbnail">
 					</div>
 					<div class="col">
 						<div class="d-flex w-100 justify-content-between">
@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		if (resultObj.status === "ok") {
 			comments = resultObj.data;
 		}
+
 		showComments(comments);
 	});
 });
