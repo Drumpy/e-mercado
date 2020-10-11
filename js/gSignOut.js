@@ -13,9 +13,12 @@ function onLoad() {
     });
 
     let bienvenidaDOM = document.getElementById("bienvenidaDOM");
+    let articlesOnCart = document.getElementById("articlesOnCart");
+    let articlesOnCartLocalStorage = JSON.parse(localStorage.cantArt);
     let userName = JSON.parse(localStorage.User);
     let avatar = document.getElementById("avatar");
 
     bienvenidaDOM.innerHTML = `<strong>${userName.email}</strong>`;
     avatar.style.backgroundImage = `url('${userName.avatar}')`;
+    articlesOnCart.innerHTML = articlesOnCartLocalStorage;
 }
