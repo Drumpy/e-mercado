@@ -19,25 +19,34 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+  <nav class="site-header py-md-2 bg-dark navbar-dark navbar navbar-expand-md">
 
-      <div class="dropdown">
-        <button class="btn btn-brand dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img id="avatar"></img>
-          <a id="bienvenidaDOM" class="d-none d-md-inline-block text-light" href="#"></a>
-        </button>
-        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-          <strong><a class="dropdown-item py-2 d-md-inline-block font-brand" href="cart.html">Ver mi carrito <span class="badge color" id="articlesOnCart">0</span></a></strong>
-          <strong><a class="dropdown-item py-2 d-md-inline-block font-brand" href="my-profile.html">Mi perfil</a></strong>
-          <div class="dropdown-divider"></div>
-          <strong><a class="dropdown-item py-2 d-md-inline-block font-brand" onclick="signOut(); onLoad();" href="#">Cerrar sesión</a></strong>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <a class="py-2 d-md-inline-block" href="home.html">Inicio</a>
+        <a class="py-2 d-md-inline-block" href="categories.html">Categorías</a>
+        <a class="py-2 d-md-inline-block" href="products.html">Productos</a>
+        <a class="py-2 d-md-inline-block" href="sell.html">Vender</a>
+
+        <div class="dropdown text-center">
+          <button class="btn btn-brand dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img id="avatar"></img>
+            <a id="bienvenidaDOM" class="d-inline-block text-light" href="#"></a>
+          </button>
+          <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+            <strong><a class="dropdown-item py-2 d-md-inline-block font-brand" href="cart.html">Ver mi carrito <span class="badge color" id="articlesOnCart">0</span></a></strong>
+            <strong><a class="dropdown-item py-2 d-md-inline-block font-brand" href="my-profile.html">Mi perfil</a></strong>
+            <div class="dropdown-divider"></div>
+            <strong><a class="dropdown-item py-2 d-md-inline-block font-brand" onclick="signOut(); onLoad();" href="#">Cerrar sesión</a></strong>
+          </div>
         </div>
       </div>
+
     </div>
   </nav>
 
@@ -70,7 +79,7 @@
           </form>
         </div>
         <div class="col-md-6 col-sm-12 mb-1 container">
-          <div class="row container p-0 m-0">
+          <div class="row p-0 m-0">
             <div class="col">
               <p class="font-weight-normal text-right my-2">Precio</p>
             </div>
@@ -80,7 +89,7 @@
             <div class="col">
               <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
             </div>
-            <div class="col-3 p-0">
+            <div class="col col-md-3 p-0">
               <div class="btn-group" role="group">
                 <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
                 <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
@@ -90,7 +99,7 @@
         </div>
       </div>
       <div>
-        <div class="list-group" id="contenido">
+        <div class="row" id="contenido">
         </div>
       </div>
     </div>

@@ -69,25 +69,30 @@
         <!-- Muestro contenido del Carrito -->
         <div class="col-8 list-group mt-4">
           <ul class="list-group-item rounded">
-            <div class="row">
-              <div class="col-3 d-flex align-items-center">
+            <div class="row justify-content-around">
+              <div class="col-2 d-flex align-items-center">
                 <div class="d-flex w-100 align-items-center justify-content-center">
                   <b>Articulo</b>
                 </div>
               </div>
-              <div class="col-3 d-flex align-items-center">
+              <div class="col-2 d-flex align-items-center">
                 <div class="d-flex w-100 align-items-center justify-content-center">
                   <b>Nombre</b>
                 </div>
               </div>
-              <div class="col-3 d-flex align-items-center">
+              <div class="col-2 d-flex align-items-center">
                 <div class="d-flex w-100 align-items-center justify-content-center">
                   <b>Precio</b>
                 </div>
               </div>
-              <div class="col-3 d-flex align-items-center">
+              <div class="col-2 d-flex align-items-center">
                 <div class="d-flex w-100 align-items-center justify-content-center">
                   <b>Cantidad</b>
+                </div>
+              </div>
+              <div class="col-2 d-flex align-items-center">
+                <div class="d-flex w-100 align-items-center justify-content-center">
+                  <b>Borrar</b>
                 </div>
               </div>
             </div>
@@ -126,9 +131,9 @@
               <span>Total</span>
               <strong id="totalCostDOM">-</strong>
             </li>
-            <li class="list-group mt-3">
+            <!-- <li class="list-group mt-3">
               <button class="btn btn-brand w-100 btn-primary font-weight-bold">Finalizar Compra</button>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -155,66 +160,119 @@
     </div>
     <hr class="mb-4">
 
-    <h5 class="mb-3">Dirección de envío</h5>
-    <div class="row">
-      <div class="col-6">
-        <label for="productName">Calle</label>
-        <input type="text" class="form-control" id="productName" placeholder="" value="">
-        <div class="invalid-feedback">
-          Ingresa una calle
-        </div>
-      </div>
-      <div class="col-3">
-        <label for="productName">Número</label>
-        <input type="text" class="form-control" id="productName" placeholder="" value="">
-        <div class="invalid-feedback">
-          Ingresa un número de puerta
-        </div>
-      </div>
-      <div class="col-6 mt-3">
-        <label for="productName">Esquina</label>
-        <input type="text" class="form-control" id="productName" placeholder="" value="">
-        <div class="invalid-feedback">
-          Ingresa una esquina
-        </div>
-      </div>
-      <div class="col-3 mt-3">
-        <label for="state">País</label>
-        <select class="custom-select d-block w-100" id="countriesDOM">
-          <option value="">Elija un país...</option>
-        </select>
-        <div class="invalid-feedback">
-          Por favor ingresa una categoría válida.
-        </div>
-      </div>
-    </div>
-    <hr class="my-4">
+    <form class="needs-validation" novalidate>
 
-    <h5 class="mb-3">Forma de Pago</h5>
-    <div class="row">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pagosModal">Seleccionar Forma de Pago</button>
-      <!-- Modal -->
-      <div class="modal fade" id="pagosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Forma de Pago</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Guardar</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      <h5 class="mb-3">Dirección de envío</h5>
+      <div class="row">
+        <div class="col-6">
+          <label for="productName">Calle</label>
+          <input type="text" class="form-control" id="productName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Ingresa una calle
+          </div>
+        </div>
+        <div class="col-3">
+          <label for="productName">Número</label>
+          <input type="number" class="form-control" id="productName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Ingresa un número de puerta
+          </div>
+        </div>
+        <div class="col-6 mt-3">
+          <label for="productName">Esquina</label>
+          <input type="text" class="form-control" id="productName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Ingresa una esquina
+          </div>
+        </div>
+        <div class="col-3 mt-3">
+          <label for="state">País</label>
+          <select class="custom-select d-block w-100" id="countriesDOM" required>
+            <option value="">Elija un país...</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor ingresa una categoría válida.
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+
+      <h5 class="mb-3">Forma de Pago</h5>
+      <div class="row">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#pagosModal">Seleccionar Forma de Pago</button>
+        <!-- Modal -->
+        <div class="modal fade" id="pagosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Forma de Pago</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" data-toggle="collapse" href="#tarjetaCredito" role="button">
+                  <label class="custom-control-label" for="customRadio1">Tarjeta de Credito</label>
+                </div>
+
+                <div class="collapse" id="tarjetaCredito">
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <label for="productName">Número de Tarjeta</label>
+                      <input type="number" class="form-control" id="productName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Ingrese un número de tarjeta
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="productName">Código de Seguridad</label>
+                      <input type="number" class="form-control" id="productName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Ingresa un número de seguridad
+                      </div>
+                    </div>
+                    <div class="col-6 mt-3">
+                      <label for="productName">Vencimiento (MM/AA)</label>
+                      <input type="number" class="form-control" id="productName" placeholder="" value="" required minlength="4">
+                      <div class="invalid-feedback">
+                        Ingrese un vencimiento correcto
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-control custom-radio mt-3">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" data-toggle="collapse" href="#transferenciaBancaria" role="button">
+                  <label class="custom-control-label" for="customRadio2">Transferencia Bancaria</label>
+                </div>
+
+                <div class="collapse" id="transferenciaBancaria">
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <label for="productName">Número de Cuenta</label>
+                      <input type="number" class="form-control" id="productName" placeholder="" value="">
+                      <div class="invalid-feedback">
+                        Ingrese un número de cuenta
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <button class="btn btn-brand w-100 btn-primary font-weight-bold" type="submit" onclick="checkValidation();">Finalizar Compra</button>
+
+    </form>
 
   </div>
 
@@ -237,6 +295,34 @@
     </div>
   </footer>
 
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+              Swal.fire({
+                title: 'Campos sin completar!',
+                text: 'Favor de completar todos los campos',
+                icon: 'error',
+                confirmButtonText: 'Entendido'
+              })
+            }
+            event.preventDefault();
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
   <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
@@ -245,6 +331,7 @@
   <script src="js/cart.js"></script>
   <script src="js/checkUser.js"></script>
   <script src="js/gSignOut.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>

@@ -64,33 +64,23 @@ function showCategoriesList() {
         category.description.toLowerCase().indexOf(query) != -1
       ) {
         htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="
-            ${category.imgSrc}
-            " alt="
-            ${category.description}
-            " class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <div class="mb-1">
-                        <h4>
-            ${category.name} - ${category.currency} ${category.cost}
-            </h4>
-                        <p>
-            ${category.description}
-            </p>
-                        </div>
-                        <small class="text-muted">
-            ${category.soldCount}
-            artículos</small>
-                    </div>
-                </div>
-            </div>
-        </a>
-            `;
+            <div class="col-md-4 col-lg-3">
+
+            <a href="#" class="card mb-4 shadow-sm custom-card">
+
+              <img src="${category.imgSrc}" class="card-img-top">
+              <div class="card-body">
+              <h3 class="mb-3">${category.name}</h3>
+              <h6 class="card-subtitle mb-2 text-muted">${category.currency} ${category.cost}</h6>
+                  <p class="card-text">
+                    ${category.description}
+                  </p>
+              </div>
+              
+            </a>
+
+          </div>
+        `;
       }
     }
 

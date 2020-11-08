@@ -1,6 +1,8 @@
 const NEWCARRITO = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 const COUNTRIES = "https://restcountries.eu/rest/v2/all";
 
+let articlesArray = [];
+
 let PERCENTAGE_SYMBOL = '%';
 let MONEY_SYMBOL = "$";
 let DOLLAR_SYMBOL = "USD ";
@@ -40,6 +42,11 @@ function showArticles(array) {
               			<input type="number" class="form-control" id="articleCount-${index}" value="${article.count}" min="0" onchange="updateValues();">
 					</div>
 				</div>
+				<div class="col-2 d-flex align-items-center justify-content-center">
+					<div class="d-flex justify-content-center align-items-center">
+              			<span onclick="deleteArticle(${index});">❌</span>
+					</div>
+				</div>
 			</div>
 		</ul>
 		`;
@@ -68,12 +75,12 @@ function updateValues() {
 		let countID = `articleCount-${i}`;
 		let count = document.getElementById(countID).value;
 
-		if (i === 0) {
-			subTotalCost = ((costDOM[i].textContent * count) / 40);
-		} else {
-			// Calculo el Subtotal
-			subTotalCost += costDOM[i].textContent * count;
-		}
+		// if (i === 0) {
+		// 	subTotalCost = ((costDOM[i].textContent * count) / 40);
+		// } else {
+		// Calculo el Subtotal
+		subTotalCost += costDOM[i].textContent * count;
+		// }
 
 		// Calculo Cantidad de Articulos
 		articleCountNum += +count;
@@ -101,6 +108,29 @@ function updateValues() {
 	totalCostDOM.innerHTML = MONEY_SYMBOL + totalCost.toLocaleString(); // .toLocaleString valida el numero y agrega el "." donde corresponde
 }
 
+function deleteArticle(index) {
+	articlesArray.splice(index, 1);
+	showArticles(articlesArray);
+	updateValues();
+}
+
+function checkValidation() {
+	let formInputs = document.getElementsByTagName("form")[0];
+	let radioInput1 = document.getElementById("customRadio1");
+	let radioInput2 = document.getElementById("customRadio2");
+
+	if (radioInput1.checked || radioInput2.checked) {
+		if (formInputs.checkValidity()) {
+			Swal.fire({
+				title: 'Compra realizada con éxito!',
+				text: 'Gracias por comprar en e-Mercado 😀',
+				icon: 'success',
+				confirmButtonText: '<a href="products.html" class="text-white ">Continuar</a>'
+			})
+		}
+	}
+}
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -108,8 +138,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	getJSONData(NEWCARRITO).then(function (resultObj) {
 		if (resultObj.status === "ok") {
 			var articles = resultObj.data;
+			articlesArray = articles.articles;
 		}
-		showArticles(articles.articles);
+		showArticles(articlesArray);
 	});
 	getJSONData(COUNTRIES).then(function (resultObj) {
 		if (resultObj.status === "ok") {
