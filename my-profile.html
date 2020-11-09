@@ -58,26 +58,76 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <div class="container">
+
+    <div class="text-center p-4">
+      <h2>Mi Perfil</h2>
+      <p class="lead">Verás aquí todos los datos de tu perfil.</p>
     </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="profileImageLoad">Foto de Perfil</label>
+          <input type='file' accept='image/*' onchange='openFile(event)' id="profileImageLoad" class="form-control-file">
+        </div>
+        <div class="form-group">
+          <label for="profileFirstName">Primer nombre</label>
+          <input type="text" class="form-control" id="profileFirstName">
+        </div>
+        <div class="form-group">
+          <label for="profileFirstLastName">Primer apellido</label>
+          <input type="text" class="form-control" id="profileFirstLastName">
+        </div>
+        <div class="form-group">
+          <label for="profileBirth">Edad</label>
+          <input type="number" class="form-control" id="profileDayOfBirth">
+        </div>
+        <div class="form-group">
+          <label for="profileEmail">Email</label>
+          <input type="email" class="form-control" id="profileEmail">
+        </div>
+        <div class="form-group">
+          <label for="profileNumber">Teléfono</label>
+          <input type="number" class="form-control" id="profileNumber">
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="..." class="img-thumbnail mb-4 w-50" id="profileImage">
+            <h5 class="card-title" id="profileNameDOM"></h5>
+            <h6 class="card-title" id="profileDayOfBirthDOM"></h6>
+            <h6 class="card-title" id="profileEmailDOM"></h6>
+            <h6 class="card-title" id="profileNumberDOM"></h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <button class="btn btn-brand text-white" id="saveProfile" onclick="saveProfile();">Guardar cambios</button>
+
   </div>
-  <footer class="text-muted bg-light">
+
+  <footer class="text-muted bg-light mt-4">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
+
+  <div class="alert alert-success fade" role="alert" id="alertResult">
+    <span id="resultSpan">Se guardaron los datos correctamente.</span>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -86,6 +136,7 @@
       <div></div>
     </div>
   </div>
+
   <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
