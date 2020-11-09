@@ -39,7 +39,6 @@ function showProfile() {
 	profileDayOfBirthDOM.innerHTML = profileDayOfBirth.value + " " + 'años';
 	profileEmailDOM.innerHTML = profileEmail.value;
 	profileNumberDOM.innerHTML = profileNumber.value;
-
 }
 
 let openFile = function (file) {
@@ -65,5 +64,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	profileNumber.value = myProfileData.number;
 	profileImage.src = myProfileData.image;
 
-	showProfile();
+	if (myProfileData) {
+		showProfile();
+	}
 });
